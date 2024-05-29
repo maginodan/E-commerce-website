@@ -7,4 +7,5 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     path('',views.index),
     path('products/',views.products),
+    path('products/<int:id>/', views.product_detail),
 ]
