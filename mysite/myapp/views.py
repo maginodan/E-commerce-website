@@ -5,10 +5,18 @@ from .models import Product
 def index(request):
     return HttpResponse("helo world")
 
+# for all products
 def products(request):
     products = Product.objects.all()
     context={'products':products}
     return render(request, 'myapp/index.html',context)
     
+# for a single product
+def product_detail(request,id):
+    product=Product.objects.get(id=id)
+    context={
+        'product':product
+    }
+    return render(request,'myapp/detail.html',context)
 
-
+ 
