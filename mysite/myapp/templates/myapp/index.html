@@ -1,15 +1,23 @@
 <!-- <!DOCTYPE html> -->
-<html lang="en">
+<!-- <html lang="en"> -->
+{% load static %}
+
+<html>  
 <head>
+  <link rel="stylesheet" href="{% static 'myapp/styles.css' %}" >
     <!-- <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title> -->
+
 </head>
 <body>
     <h1>This a template, This is being rendered!</h1>
     
     {% for product in products %}
+    
+    <a href="{% url 'myapp:product_detail' product.id %}">
       {{product.name}} -> {{product.price}} -> {{product.desc}} </br>
+    </a>
     {% endfor %}
 </body>
 </html>
