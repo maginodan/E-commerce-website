@@ -34,7 +34,7 @@
    <!--creating the card to hold the products -->
 
    <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 xl xl:grid-cols-3 gap-5">
-  
+      <!-- CARD 1 -->
     {% for product in products %}
     
     <a href="{% url 'myapp:product_detail' product.id %}">
