@@ -19,4 +19,13 @@ def product_detail(request,id):
     }
     return render(request,'myapp/detail.html',context)
 
+def add_product(request):
+    if request.method =='POST':
+    #variable                 name and id passed
+       name = request.POST.get('name')
+       price = request.POST.get('price')
+       desc = request.POST.get('desc')
+       image = request.FILES['upload']
+    return render(request,'myapp/addproduct.html')
+
  
