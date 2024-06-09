@@ -130,3 +130,5 @@ MEDIA_ROOT = BASE_DIR/ 'media'
 MEDIA_URL = '/media/'
 # redirect to products homepage after logging in
 LOGIN_REDIRECT_URL='myapp:products'
+# when ever user needs to login is required to a particular page
+LOGIN_URL = 'users:login'
